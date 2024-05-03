@@ -43,28 +43,28 @@ Tree의 노드 값의 합을 최대로 만드는 경로 구하기(2)
 * N과 K가 주어질 때 N이 1이 될 때까지 1번 혹은 2번의 과정을 수행해야 하는 최소 횟수를 구하는 프로그램을 작성하시오.
 * <입력 조건> 첫째 줄에 N(1 <= N <= 100,000)과 K(2 <= K <= 100,000)가 공백을 기준으로 하여 각각 자연수로 주어진다.
 * <출력 조건> 첫째 줄에 N이 1이 될 때까지 1번 혹은 2번의 과정을 수행해야 하는 횟수의 최솟값을 출력한다.
-This is a normal paragraph:
 
-    ############### 답안 예시 ################
-    # N, K을 공백을 기준으로 구분하여 입력 받기
-    n, k = map(int, input().split())
-    
-    result = 0
-    
-    while True:
-      # N이 K로 나누어 떨어지는 수가 될 때까지 빼기
-      target = (n // k) * k
-      result += (n - target)
-      n = target
-      # N이 K보다 작을 때 (더 이상 나눌 수 없을 때) 반복문 탈출
-      if n < k:
-        break
-      # K로 나누기
-      result += 1
-      n //= k
-    
-    # 마지막으로 남은 수에 대하여 1씩 빼기
-    result += (n - 1)
-    print(result)
-    
-end code block.
+* 아래는 답안 예시이며 나의 답안은 Greedy.py에 저장.
+'''python
+############### 답안 예시 ################
+# N, K을 공백을 기준으로 구분하여 입력 받기
+n, k = map(int, input().split())
+
+result = 0
+
+while True:
+  # N이 K로 나누어 떨어지는 수가 될 때까지 빼기
+  target = (n // k) * k
+  result += (n - target)
+  n = target
+  # N이 K보다 작을 때 (더 이상 나눌 수 없을 때) 반복문 탈출
+  if n < k:
+    break
+  # K로 나누기
+  result += 1
+  n //= k
+
+# 마지막으로 남은 수에 대하여 1씩 빼기
+result += (n - 1)
+print(result)
+'''
