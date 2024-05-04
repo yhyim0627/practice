@@ -1,3 +1,4 @@
+# 모험가 길드
 import time
 
 N = int(input())
