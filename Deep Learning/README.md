@@ -7,3 +7,4 @@ Deep Learning
   * CNN
   * RNN
   * Transformer
+  * ViT(Vision Transformer)
