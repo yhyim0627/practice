@@ -1,3 +1,4 @@
+# 1이 될 때까지
 import sys
 
 n, k = sys.stdin.readline().split()
