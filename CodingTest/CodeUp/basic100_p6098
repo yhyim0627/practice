@@ -1,0 +1,34 @@
+maze = []
+for _ in range(10):
+  maze.append(list(map(int, input().split())))
+
+pos_x = 1
+pos_y = 1
+maze[pos_x][pos_y] = 9
+
+while True:
+  if (maze[pos_x + 1][pos_y] == 1) and (maze[pos_x][pos_y + 1] == 1):
+    break
+
+  if maze[pos_x][pos_y + 1] != 1:
+    if maze[pos_x][pos_y + 1] == 2:
+      pos_y += 1
+      maze[pos_x][pos_y] = 9
+      break
+    pos_y += 1
+    maze[pos_x][pos_y] = 9
+    
+  
+  elif (maze[pos_x + 1][pos_y] != 1):
+    if maze[pos_x + 1][pos_y] == 2:
+      pos_x += 1
+      maze[pos_x][pos_y] = 9
+      break
+    pos_x += 1
+    maze[pos_x][pos_y] = 9
+
+
+for i in range(10):
+  for j in range(10):
+    print(maze[i][j], end=' ')
+  print()
